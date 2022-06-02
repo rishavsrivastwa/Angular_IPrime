@@ -1,0 +1,45 @@
+<div class="wrapper">
+    <div class="logo"> <img src="./../../../assets/img/logo1.png" alt=""> </div>
+    <div class="text-center mt-4 name"> Register </div>
+    <form class="p-3 mt-3" autocomplete="off" [formGroup]="form" *ngIf="form" (ngSubmit)="onSubmit()">
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+
+            <input type="text" name="userName" id="userName" placeholder="Username" formControlName="username" [formControl]="usernameControl" />
+
+        </div>
+        <ng-container *ngIf="usernameControl.invalid">
+            <mat-error *ngIf="usernameControl?.touched && usernameControl.errors?.['required']">
+                You must enter your username
+            </mat-error>
+            <mat-error *ngIf="usernameControl.errors?.['minlength']">
+                Username should have at least 6 alhphanumeric characters
+            </mat-error>
+        </ng-container>
+
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span>
+
+            <input matInput type="email" name="Email" id="Email" placeholder="Email" [formControl]="emailControl">
+
+        </div>
+        <mat-error *ngIf="emailControl.invalid">
+            You must enter your email
+        </mat-error>
+
+        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span>
+
+            <input type="password" name="password" id="pwd" placeholder="Password" [formControl]="passwordControl">
+
+        </div>
+        <ng-container *ngIf="usernameControl.invalid">
+            <mat-error *ngIf="passwordControl?.touched && passwordControl.errors?.['required']">
+                You must enter the password
+            </mat-error>
+            <mat-error *ngIf="passwordControl.errors?.['minlength']">
+                Username should have at least 6 alhphanumeric characters
+            </mat-error>
+        </ng-container>
+
+        <button type="submit" class="btn mt-3 signup"></button>
+    </form>
+    <div class="text-center fs-6"><a routerLink="/public/log-in">Click Here For Login</a> </div>
+</div>

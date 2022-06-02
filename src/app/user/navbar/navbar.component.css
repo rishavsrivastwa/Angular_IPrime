@@ -1,0 +1,77 @@
+
+.cart{
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-left: 630px;
+}
+.toggle{
+  margin-left: 700px;
+}
+i{
+    position:absolute;
+}
+a{
+  margin-left: 20px;
+}
+.logo{
+  width: 36px;
+  margin-bottom: 5px;
+}
+.navbar{
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 9999;   /* navbar behind content fixed */
+}
+.navbar-brand{
+  font-family: cursive;
+  /* margin-bottom: 8px; */
+}
+.dropdown-item{
+  width: 300px;
+  padding-left: 35px;
+  
+}
+/* .dropdown-menu {
+  height:250px;
+  width: 700px;
+  overflow-y: scroll;
+} */
+.dropdown-menu{
+  width: 80px;
+  margin-top: 5px;
+  background-color: #007bff;
+  color: white;
+}
+.dropdown-item:hover{
+  background-color: #007bff;
+  width: 100px;
+}
+.badge{
+  position: relative;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-toggle{
+  margin-left: 35px;
+}
+
+/* .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-menu {display: block;} */
+
+.username{
+  margin-left: 0px;
+}
+
+
+
+

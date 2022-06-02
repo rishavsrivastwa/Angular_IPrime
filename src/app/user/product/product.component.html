@@ -1,0 +1,36 @@
+<div class="nav"><app-navbar></app-navbar></div>
+ 
+  <!-- Products Start -->
+  <div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card" style="width: 250px;">
+               
+                
+                <a class="link" [routerLink]="['../pro',item.title,item.price,item.image,item.description]">
+                  <img class="product-img" src="{{item.image}}" alt="fail to load">
+                  <h5>{{item.title}}</h5>
+                  <p>{{item.description}}</p>
+                  <!-- <p><strong>Price: &nbsp;</strong>Rs{{item.price}}</p> -->
+                  <p><strong>Price: &nbsp;</strong>{{item.price|currency:'INR'}}</p>
+              </a>
+                <div class="rating">
+                  <div class="stars">
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                  </div>
+                  <span class="review-no">1000+ reviews</span>
+              </div>
+              <button class="glow-on-hover icon-cart" (click)="addProduct(item)"> <i class="fa-solid fa-cart-arrow-down text-light fa-1x"></i>Add to cart</button>
+            </div>
+  
+        </ng-container>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+
+  <!-- Products End -->

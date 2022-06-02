@@ -1,0 +1,23 @@
+<div class="wrapper">
+    <div class="logo"> <img src="/assets/img/logo1.png" alt=""> </div>
+    <div class="text-center mt-4 name"> Login </div>
+    <form class="p-3 mt-3" autocomplete="off" [formGroup]="loginForm" (ngSubmit)="loginReactiveApproach()" >
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> 
+            <input type="email" name="email" id="user" placeholder="email" formControlName="email" required> 
+        </div>
+        <div id="emailHelp" *ngIf=" email?.touched && email?.invalid">Invalid Email
+        </div>
+
+        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> 
+            <input type="password" name="password" id="pass" placeholder="Password" formControlName="password" required> 
+        </div> 
+        <div id="passHelp" *ngIf="password?.touched && password?.invalid"> Password Incorrect
+        </div>
+        
+        <button type="submit" class="btn mt-3 login"></button>
+    </form>
+    <div class="text-center fs-6"> <a href="/public/log-in">Forget password?</a> or <a routerLink="/public/sign-up">Sign up</a> </div>
+</div>
+
+
+<router-outlet></router-outlet>

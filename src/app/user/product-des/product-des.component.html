@@ -1,0 +1,108 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Product Detail</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="card">
+			<div class="container-fliud">
+				<div class="wrapper row">
+					<div class="preview col-md-6">
+
+						<!-- <div class="preview-pic tab-content">
+							<div class="tab-pane active" id="myimage"><img src={{img}} /></div>
+							<div class="tab-pane" id="pic-2"><img src={{img}} /></div>
+							<div class="tab-pane" id="pic-3"><img src={{img}} /></div>
+							<div class="tab-pane" id="pic-4"><img src={{img}} /></div>
+							<div class="tab-pane" id="pic-5"><img src={{img}} /></div>
+						</div>
+						<ul class="preview-thumbnail nav nav-tabs">
+							<li class="active"><a data-target="#pic-1" data-toggle="tab"><img src={{img}} /></a></li>
+							<li><a data-target="#pic-2" data-toggle="tab"><img src={{img}} /></a></li>
+							<li><a data-target="#pic-3" data-toggle="tab"><img src={{img}} /></a></li>
+							<li><a data-target="#pic-4" data-toggle="tab"><img src={{img}} /></a></li>
+							<li><a data-target="#pic-5" data-toggle="tab"><img src={{img}} /></a></li>
+						</ul> -->
+
+						<div class="container">
+							<div class="img-zoom-container">
+								<div class="img-zoom-lens" id="lens">
+									<div id="myresult" class="img-zoom-result"></div>
+								</div>
+							</div>
+							<div class="tab-pane active" id="pic-1">
+								<img id="myimage" src={{img}} width="450" height="390" alt="Girl">
+							</div>
+						</div>
+
+					</div>
+
+
+					<div class="details col-md-6">
+
+						<h3 class="product-title">{{title}}</h3>
+						<a class="cart" routerLink="/cart" aria-expanded="false">
+							<i class="fa-solid fa-cart-arrow-down fa-2x" style="color: #3f51b5;"></i>
+							<div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+						</a>
+						<div class="rating">
+							<div class="stars">
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star checked"></span>
+								<span class="fa fa-star "></span>
+							</div>
+							<span class="review-no">1000+ reviews</span>
+						</div>
+						<p class="product-description">{{des}}</p>
+						<h4 class="price">current price: <span>{{price}}</span></h4>
+						<p class="vote"><strong>90%</strong> of buyers like this product <strong>(300+ votes)</strong>
+						</p>
+
+						<h5 class="colors">colors:
+							<span class="color black " data-toggle="tooltip"></span>
+							<span class="color white"></span>
+							<span class="color blue"></span>
+							<span class="color pink"></span>
+						</h5>
+						<div class="action">
+							<button mat-flat-button color="primary" type="button" (click)="addProduct()"><i
+									class="fa-solid fa-cart-arrow-down text-light fa-1x icon_cart"></i>Add to
+								cart</button>
+							<button style="margin-left: 2px;" mat-flat-button color="primary" type="button"
+								(click)="likebutton()"><i class="fa-solid fa-thumbs-up fa-2x"></i></button>
+
+						</div>
+						<br>
+						<br>
+						<button mat-flat-button color="primary" lass="btn btn-default bck_btn" type="button"
+							routerLink="/">Back to Home</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
+
+
+<app-footer></app-footer>
