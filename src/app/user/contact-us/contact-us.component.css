@@ -16,9 +16,11 @@
     padding-left: 20px
 }
 
-.pad-icon a {
+.pad-icon i {
     text-decoration: none;
-    margin-right: 40px
+    margin-right: 40px;
+    padding-left: 2px;
+    padding-top: 2px;
 }
 
 .input-group input:focus {
@@ -40,7 +42,21 @@
 #bordering a:active {
     border: 1px solid #0080ff
 }
-
+.boder-1{
+    background-color: white;
+    width: 14px;
+    height: 18px;
+}
+.boder-2{
+    background-color: white;
+    width: 17px;
+    height: 18px;
+}
+.boder-3{
+    background-color: white;
+    width: 20px;
+    height: 18px;
+}
 @media(min-width:568px) {
     .container-fluid {
         margin: 100px 30px;
