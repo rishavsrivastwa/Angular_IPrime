@@ -56,3 +56,9 @@ a {
 .title{
     font-size: large;
 }
+.float-left{
+    position: absolute;
+}
+.float-right{
+    position: relative;
+}

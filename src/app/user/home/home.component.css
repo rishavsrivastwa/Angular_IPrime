@@ -32,9 +32,6 @@
 .product-img:hover{
   height: 185px;
 }
-.carousel{
-  margin-top: 1px;
-}
 
 .checked, .price span {
   color: #ff9f1a; }
@@ -42,6 +39,8 @@
   text-decoration: none;
   color: black;
 }
+
+/* Carousel Start */
 .carousel-control-prev{
   margin-left: 0px;
   width: 30px;
@@ -62,7 +61,10 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+/* Carousl End */
 
+
+/* Glow on Hover Start */
 .glow-on-hover {
   width: 220px;
   height: 50px;
@@ -122,10 +124,15 @@
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
 }
+
+/* Glow on Hover end */
+
+
 i{
   padding-right: 12px;
 }
 
+/* Header Start */
 .header {
   padding: 1rem;
   background-color: var(--font-color);
@@ -178,5 +185,37 @@ i{
   color: var(--theme-color);
 }
 
+/* Header End */
+
+
+/* Slider start */
+
+@keyframes slidy {
+  0% { left: 0%; }
+  20% { left: 0%; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+  }
+  
+
+  div#slider { overflow: hidden; }
+  div#slider figure img { width: 20%; float: left; }
+  div#slider figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite; 
+  }
+
+  /* Slider End */
+  
 
 

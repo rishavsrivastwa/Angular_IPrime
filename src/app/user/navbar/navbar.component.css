@@ -16,6 +16,7 @@ a{
 .logo{
   width: 36px;
   margin-bottom: 5px;
+  margin-left: 12px;
 }
 .navbar{
   position: fixed; /* Set the navbar to fixed position */
@@ -25,7 +26,7 @@ a{
 }
 .navbar-brand{
   font-family: cursive;
-  /* margin-bottom: 8px; */
+  margin-top: -7px;
 }
 .dropdown-item{
   width: 300px;
