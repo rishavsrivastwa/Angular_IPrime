@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { AddProductComponent } from './add-product/add-product.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 
@@ -22,7 +21,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     PublicLayoutComponent,
     UserLayoutComponent,
     PagenotfoundComponent,
-    AddProductComponent,
+
    
   ],
   imports: [

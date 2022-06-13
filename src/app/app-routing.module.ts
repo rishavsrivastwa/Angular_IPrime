@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductComponent } from './add-product/add-product.component';
+
 import { PublicLayoutComponent } from './layout/public-layout/public-layout.component';
 import { UserLayoutComponent } from './layout/user-layout/user-layout.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -27,7 +27,7 @@ const routes: Routes = [
     path: '', component:PublicLayoutComponent,
     children: PUBLIC_ROUTES
   },
-  {path:'add',component:AddProductComponent},
+  // {path:'admin',component:AddProductComponent},
   {path:'**',pathMatch: 'full', component:PagenotfoundComponent}
   
 ];
