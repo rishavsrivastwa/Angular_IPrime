@@ -45,4 +45,8 @@ export class DataService {
   createPost(payload: any): any {
     this.dataCollection.add(payload);
   }
+  deletePost(payload:any):any{
+    this.documentReference=this.fireStore.doc('Data/'+payload.id);
+    this.documentReference.delete()
+  }
 }

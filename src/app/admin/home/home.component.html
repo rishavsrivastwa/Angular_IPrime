@@ -1,0 +1,68 @@
+<app-sidenav></app-sidenav>
+
+<!-- add Product -->
+
+
+<form [formGroup]="postForm" autocomplete="off">
+    <div class="form-group">
+      <label for="input_id">Id</label>
+      <input type="number" name="id" formControlName="id" class="form-control" id="input_id"
+        placeholder="Enter Id">
+    </div>
+    <div class="form-group">
+      <label for="input_title">Title</label>
+      <input type="text" name="title" formControlName="title" class="form-control" id="input_title"
+        placeholder="Enter Title"><br>
+    </div>
+    <div class="form-group">
+      <label for="input_category">Category</label>
+      <input type="text" name="category" formControlName="category" class="form-control" id="input_category"
+        placeholder="Enter Category">
+    </div>
+    <div class="form-group">
+      <label for="input_img">Image Path</label>
+      <input type="text" name="image" formControlName="image" class="form-control" id="input_img"
+        placeholder="Enter Image Path"><br>
+    </div>
+    <div class="form-group">
+      <label for="input_price">Price</label>
+      <input type="text" name="price" formControlName="price" class="form-control" id="input_price"
+        placeholder="Enter Price"><br>
+    </div>
+    <div class="form-group">
+      <label for="input_description">Description</label>
+      <textarea class="form-control" name="description" formControlName="description" id="input_description"
+        rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <!-- <br><input type="file" (change)="showPreviewImage($event)"><br><br> -->
+      <img [src]="localUrl" *ngIf="localUrl" class="imgPlaceholder">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="addProduct()">Submit</button>
+  </form>
+  
+
+<!-- add Product End -->
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card" style="width: 200px;">
+               
+                
+                <a class="link">
+                  <img class="product-img" src="{{item.image}}" alt="fail to load">
+                  <h5>{{item.title}}</h5>
+                  <p>{{item.description}}</p>
+                  <!-- <p><strong>Price: &nbsp;</strong>Rs{{item.price}}</p> -->
+                  <p><strong>Price: &nbsp;</strong>{{item.price|currency:'INR'}}</p>
+              </a>
+                
+              <button class="glow-on-hover edit" (click)="editPost(item)">Edit</button>
+              <div class="snd">
+              <button class="glow-on-hover delete" (click)="deletePost(item)">Delete</button>
+            </div>
+            </div>
+  
+        </ng-container>

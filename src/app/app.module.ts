@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { environment } from 'src/environments/environment';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
 
 
 
@@ -21,6 +22,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     PublicLayoutComponent,
     UserLayoutComponent,
     PagenotfoundComponent,
+    AdminLayoutComponent,
 
    
   ],

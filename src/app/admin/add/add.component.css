@@ -1,0 +1,10 @@
+form{
+    margin-left: 500px;
+    margin-top: 50px;
+}
+input, textarea{
+    width: 300px;
+}
+.imgPlaceholder{
+    width: 200px;
+}

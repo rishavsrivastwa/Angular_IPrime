@@ -1,0 +1,25 @@
+body {
+    background-color: #fbfbfb;
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  .container-fluid{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h2{
+    margin-left: 550px;
+    margin-top: 5px;
+    font-size: 22px;
+}
+a{
+    text-decoration: none;
+    color: #fbfbfb;
+    margin-top: 0px;
+}
+
+  
+  
